@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css cards</title>
+  <link rel="stylesheet" type="text/css" href="static/css/style1.css">
+  <link rel="stylesheet" href="static/css/card/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="static/css/card/style1.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="static/css/card/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="static/css/card/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="static/js/js/modernizer.js"></script>
+
+</head>
+<body>
+
+<section class="hero-section">
+    <div class="row">
+        
+ {% for item in total_details %}
+<div class="col-md-12">
+
+  <div class="card-grid">
+    <a class="card" href="#" style="width: 500px; height: 400px;">
+      <div class="card__background" style="background-image: url(static/img/bg.jpg)"></div>
+      <div class="card__content" >
+        <!-- <p class="card__category">Sr no: 1</p> -->
+        <div class="row">
+            <form method="POST">
+           <div class="col-lg-4 col-md-6 ">
+            <h3  style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;font-size: 24px; color: white;"> Farmer Name: </h3>
+        </div>
+        <div class="col-lg-4 col-md-6 ">
+          <input style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;opacity: 0.5;" type="" name="" value="{{item[0]}}">
+        </div> 
+        </div>
+        <div class="row">
+           <div class="col-lg-4 col-md-6 ">
+            <h3  style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;font-size: 24px; color: white;"> Email id: </h3>
+        </div>
+        <div class="col-lg-4 col-md-6 ">
+          <input style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;opacity: 0.5;" type="" name="" value="{{item[1]}}">
+        </div> 
+        </div>
+        <div class="row">
+           <div class="col-lg-4 col-md-6 ">
+            <h3  style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;font-size: 24px; color: white;"> Phone number: </h3>
+        </div>
+        <div class="col-lg-4 col-md-6 ">
+          <input style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;opacity: 0.5;" type="" name="" value="{{item[2]}}">
+        </div> 
+        </div>
+        <div class="row">
+           <div class="col-lg-4 col-md-6 ">
+            <h3  style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;font-size: 24px; color: white;"> Quantity:</h3>
+        </div>
+        <div class="col-lg-4 col-md-6 ">
+          <input style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;opacity: 0.5;" type="" name="" value="{{item[3]}}">
+        </div> 
+        </div> 
+    
+        <button class="but" id ="setMessageButton">Buy</button>
+       </form>
+      </div>
+    </a>
+    
+  <div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</section>
+<script src="static/js/js/all.js"></script>
+<script src="static/js/js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="static/js/js/custom.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="hero-section">
+    <div class="row">
+        
+ {% for item in total_details %}
+<div class="col-lg-6"style="width: 550px; margin-right: 20px;margin-left: 70px;">
+
+  <div class="card-grid">
+    <a class="card" href="#" style="width: 500px; height: 400px;">
+      <div class="card__background" style="background-image: url(static/ordercard/images/bg.jpg)"></div>
+      <div class="card__content" >
+        <div class="row">
+            <form method="POST">
+           <div class="col-lg-4 col-md-6 ">
+            <h3  style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;font-size: 24px; color: white;"> Farmer Name</h3>
+        </div>
+        <div class="col-lg-4 col-md-6 ">
+          <input style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;opacity: 0.5;" type="" name="" value="{{item[0]}}">
+        </div> 
+        </div>
+        <div class="row">
+           <div class="col-lg-4 col-md-6 ">
+            <h3  style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;font-size: 24px; color: white;"> Email </h3>
+        </div>
+        <div class="col-lg-4 col-md-6 ">
+          <input style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;opacity: 0.5;" type="" name="" value="{{item[1]}}">
+        </div> 
+        </div>
+        <div class="row">
+           <div class="col-lg-4 col-md-6 ">
+            <h3  style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;font-size: 24px; color: white;"> Phone</h3>
+        </div>
+        <div class="col-lg-4 col-md-6 ">
+          <input style="padding: 10px;margin-bottom: 20px;margin-left: 10px;margin-top: 10px;opacity: 0.5;" type="" name="" value="{{item[2]}}">
+        </div> 
+        </div>
+    
+        <button class="but" id ="setMessageButton">Track order</button>
+       </form>
+      </div>
+    </a>
+    
+  <div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</section> -->

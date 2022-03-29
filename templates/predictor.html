@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
+  </head>
+  <style>
+    body {
+  background: #008000;
+  color: #fff;
+}
+
+input {
+  margin-bottom: 7px;
+}
+
+select {
+  margin-bottom: 7px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+strike {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+div.container {
+  padding: 30px;
+}
+
+#form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: #fff;
+  border-radius: 16px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#form-wrapper {
+  top: 0rem;
+  border-bottom: 1px solid #e9e9e9;
+  border-radius: 14px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  padding: 40px;
+}
+
+#submit {
+  margin-top: 20px;
+  background-color: #008000;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+}
+  </style>
+
+  <body>
+    <div class="container">
+      <h3>Stubble Price Predictor</h3>
+      <p>Get the latest price of Stubble with respect to the market price</p>
+      <div id="form-container">
+        <div id="form-wrapper">
+           <form action="/" method="post"> 
+            <div class="flex: 6">
+
+              <!-- <input
+                id="Rice"
+                class="form-control"
+                type="number"
+                min="2004"
+                max="2020"
+                step="1"
+                name="model_year"
+                placeholder="Model Year"
+                required
+              /> -->
+
+              <select name="fertilizer" class="form-control">
+                <option value="" disabled selected>Fertilizer Used</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                
+              </select>
+
+               <select name="crop_type" class="form-control">
+                <option value="" disabled selected>Select Crop Type</option>
+                <option value="Rice">Rice</option>
+                
+              </select>
+
+               <select name="soil_type" class="form-control">
+                <option value="" disabled selected>Select Soil Type</option>
+                <option value="Black">Black Soil</option>
+                <option value="Red">Red Soil</option>
+                
+              </select>
+
+              <select name="month" class="form-control">
+                <option value="" disabled selected>Select Production Month</option>
+                <option value="May-Jun">May-Jun</option>
+                <option value="Oct-Dec">Oct-Dec</option>
+                
+              </select>
+
+              <select name="removal_type" class="form-control">
+                <option value="" disabled selected>Select Stubble Removal Type</option>
+                <option value="Machine">Machine</option>
+                <option value="Labour">Labour</option>
+                
+              </select>
+
+              <select name="state" class="form-control">
+                <option value="" disabled selected>Select State</option>
+                <option value="Andra Pradesh">Andra Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                
+              </select>
+
+
+             <!--  <input
+                id="present_price"
+                class="form-control"
+                type="number"
+                min="4.0"
+                max="92.0"
+                step="0.5"
+                name="present_price"
+                placeholder="Present Price"
+                required
+              />
+              <input
+                id="kms_driven"
+                class="form-control"
+                type="number"
+                min="500"
+                max="500000"
+                name="kms_driven"
+                placeholder="Distance Travelled(in KMS)"
+                required
+              />
+
+              <input
+                id="owner"
+                class="form-control"
+                type="number"
+                min="0"
+                max="3"
+                step="1"
+                name="owner"
+                placeholder="No of owners"
+                required
+              />
+
+              <select name="fuel_type" class="form-control">
+                <option value="" disabled selected>Select Fuel Type</option>
+                <option value="petrol">Petrol</option>
+                <option value="diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+              </select>
+
+              <select name="seller_type" class="form-control">
+                <option value="" disabled selected>Select Seller Type</option>
+                <option value="dealer">Dealer</option>
+                <option value="individual">Individual</option>
+              </select>
+
+              <select name="transmission_type" class="form-control">
+                <option value="" disabled selected>
+                  Select Transmission Type
+                </option>
+                <option value="manual">Manual</option>
+                <option value="automatic">Automatic</option>
+              </select> -->
+              <center><input id="submit" class="btn" type="submit" value="Predict" /></center>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br />
+      <p>Predicted Price is : ₹ {{prediction}} per ton</p>
+    </div>
+  </body>
+</html>
